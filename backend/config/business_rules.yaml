@@ -1,0 +1,80 @@
+version: "1.0"
+description: "Business rules for MT provider selection engine"
+
+domains:
+  healthcare:
+    quality_weight: 0.70
+    cost_weight: 0.10
+    latency_weight: 0.20
+    min_quality: 85.0
+    max_cost: 0.010
+    max_latency_sec: 3.0
+    max_hallucination_risk: 0.15
+    min_terminology_accuracy: 80.0
+    notes: "High quality mandatory for patient safety and clinical accuracy"
+
+  ecommerce:
+    quality_weight: 0.40
+    cost_weight: 0.40
+    latency_weight: 0.20
+    min_quality: 80.0
+    max_cost: 0.005
+    max_latency_sec: 2.0
+    max_hallucination_risk: 0.20
+    min_terminology_accuracy: 75.0
+    notes: "Cost optimization important for high-volume product catalogue"
+
+  customer_support:
+    quality_weight: 0.30
+    cost_weight: 0.20
+    latency_weight: 0.50
+    min_quality: 78.0
+    max_cost: 0.008
+    max_latency_sec: 1.5
+    max_hallucination_risk: 0.20
+    min_terminology_accuracy: 70.0
+    notes: "Fast response time critical for customer satisfaction"
+
+  legal:
+    quality_weight: 0.80
+    cost_weight: 0.05
+    latency_weight: 0.15
+    min_quality: 90.0
+    max_cost: 0.020
+    max_latency_sec: 5.0
+    max_hallucination_risk: 0.05
+    min_terminology_accuracy: 92.0
+    notes: "Highest quality and accuracy required for legal compliance"
+
+  finance:
+    quality_weight: 0.60
+    cost_weight: 0.20
+    latency_weight: 0.20
+    min_quality: 85.0
+    max_cost: 0.015
+    max_latency_sec: 3.0
+    max_hallucination_risk: 0.10
+    min_terminology_accuracy: 88.0
+    notes: "Accuracy critical for financial data integrity"
+
+  marketing:
+    quality_weight: 0.50
+    cost_weight: 0.30
+    latency_weight: 0.20
+    min_quality: 82.0
+    max_cost: 0.008
+    max_latency_sec: 3.0
+    max_hallucination_risk: 0.20
+    min_terminology_accuracy: 78.0
+    notes: "Balance quality with cost for campaign translations"
+
+  general:
+    quality_weight: 0.50
+    cost_weight: 0.30
+    latency_weight: 0.20
+    min_quality: 75.0
+    max_cost: 0.010
+    max_latency_sec: 4.0
+    max_hallucination_risk: 0.25
+    min_terminology_accuracy: 70.0
+    notes: "General purpose rules with balanced weights"

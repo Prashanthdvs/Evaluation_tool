@@ -1,0 +1,12 @@
+[
+  {
+    "model_id": "claude-sonnet-4",
+    "model_name": "Claude Sonnet 4",
+    "provider": "Anthropic",
+    "api_type": "openai_compat",
+    "cost_per_1k_tokens": 0.009,
+    "base_latency": 2.5,
+    "color": "#4F46E5",
+    "is_builtin": false
+  }
+]
